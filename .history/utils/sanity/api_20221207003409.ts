@@ -11,9 +11,9 @@ import {
 } from './typings'
 
 const client = sanityClient({
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
-  apiVersion: '1',
+  projectId: process.env.SANITY_PROJECT_ID as string,
+  dataset: process.env.SANITY_DATASET as string,
+  apiVersion: 'v3',
   useCdn: process.env.NODE_ENV === 'production', // `false` if you want to ensure fresh data
 })
 
