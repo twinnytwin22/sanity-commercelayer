@@ -6,10 +6,11 @@ import { InstantSearch, Configure } from 'react-instantsearch-dom'
 import { searchClient } from '@utils/algolia'
 import CustomPagination from '@components/CustomPagination'
 import {
-
+  CommerceLayer,
   OrderContainer,
   OrderStorage,
 } from '@commercelayer/react-components'
+import { useGetToken } from '@hooks/GetToken'
 import { parseLanguageCode, parseLocale } from '@utils/parser'
 import _ from 'lodash'
 import { useRouter } from 'next/router'
@@ -41,7 +42,7 @@ type Props = {
 const FilterPage: NextPage<Props> = ({
   country,
   taxonomies,
-  
+  clientId,
   endpoint,
   searchEngine,
   buildLanguages = [],

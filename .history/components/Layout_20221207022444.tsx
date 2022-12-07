@@ -7,7 +7,8 @@ import {
 } from '@commercelayer/react-components'
 import ShoppingBag from './ShoppingBag'
 import LayoutContext from '@context/LayoutContext'
-
+import LanguageSelector from './LanguageSelector'
+import CountrySelector from './CountrySelector'
 import { Country } from '@typings/models'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'

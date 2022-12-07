@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import _ from 'lodash'
 import Layout from '@components/Layout'
 import {
-
+  CommerceLayer,
   Price,
   PricesContainer,
   VariantsContainer,
@@ -14,6 +14,7 @@ import {
   OrderStorage,
 } from '@commercelayer/react-components'
 import LayoutContext from '@context/LayoutContext'
+import { useGetToken } from '@hooks/GetToken'
 import { useRouter } from 'next/router'
 import locale from '@locale/index'
 import { parseImg, parseLanguageCode } from '@utils/parser'
@@ -52,16 +53,22 @@ type Props = {
 
 const ProductPage: FunctionComponent<Props> = ({
   product,
-  
+  clientId,
+  endpoint,
   countryCode,
   lang = 'en-US',
- 
+  marketId,
   buildLanguages,
   cms,
   countries,
 }) => {
   const router = useRouter()
- 
+  const token = useGetToken({
+    clientId,
+    endpoint,
+    scope: marketId,
+    countryCode: router.query?.countryCode as string,
+  })
   const imgUrl = parseImg(_.first(product?.images)?.url as string, cms)
   const firstVariantCode = _.first(product?.variants)?.code
   const variantOptions = product?.variants?.map((variant) => {
@@ -80,7 +87,7 @@ const ProductPage: FunctionComponent<Props> = ({
   }
   const languageCode = parseLanguageCode(lang, 'toLowerCase', true)
   return !product ? null : (
-    
+    <CommerceLayer accessToken={token} endpoint={endpoint}>
       <OrderStorage persistKey={`order-${countryCode}`}>
         <OrderContainer attributes={{ language_code: languageCode }}>
           <Layout
@@ -170,6 +177,7 @@ const ProductPage: FunctionComponent<Props> = ({
           </Layout>
         </OrderContainer>
       </OrderStorage>
+    </CommerceLayer>
   )
 }
 

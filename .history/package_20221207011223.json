@@ -69,7 +69,6 @@
     "@commercelayer/js-auth": "^3.0.0",
     "@commercelayer/react-components": "^3.13.0",
     "@headlessui/react": "^1.5.0",
-    "@rainbow-me/rainbowkit": "^0.8.0",
     "@sanity/client": "^3.1.0",
     "@sanity/image-url": "^1.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -81,7 +80,6 @@
     "axios": "^0.26.0",
     "client-oauth2": "^4.3.3",
     "contentful": "^9.1.10",
-    "ethers": "^5.7.2",
     "js-cookie": "^3.0.1",
     "next": "latest",
     "next-sanity": "^0.5.0",
@@ -90,8 +88,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-instantsearch-dom": "^6.22.0",
-    "sanity-template": "^2.4.3",
-    "wagmi": "^0.8.10"
+    "sanity-template": "^2.4.3"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.3.1",
