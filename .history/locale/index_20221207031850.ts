@@ -17,6 +17,7 @@ const locale: Locale = {
     language: 'language',
     languages: {
       'en-us': 'english',
+      'it-it': 'italian',
     },
     method: 'method',
     outOfStock: 'The requested quantity is not available',
@@ -24,7 +25,7 @@ const locale: Locale = {
     proceedToCheckout: 'Proceed to checkout',
     selectSize: 'Select your size',
     shippingTo: 'Shipping to',
-    yourShoppingCart: 'Your cart contains',
+    yourShoppingCart: 'Your shopping cart contains',
     searchTitle: 'Find everything instantly',
     sortBy: 'Sort by',
     featured: 'Featured',

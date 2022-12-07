@@ -197,7 +197,7 @@ const Layout: React.FunctionComponent<Props> = ({
                     {showMenu && (
                       <a href="#" onClick={handleAnimation}>
                         <div className="flex flex-row items-center">
-                          <span className="inline-block">Cart</span>
+                          <span className="inline-block">Shopping Bag</span>
                           <LineItemsContainer>
                             <LineItemsCount className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-sm font-medium leading-5 bg-blue-500 hover:bg-blue-400 text-gray-50" />
                           </LineItemsContainer>

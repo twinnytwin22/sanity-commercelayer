@@ -24,7 +24,7 @@ const locale: Locale = {
     proceedToCheckout: 'Proceed to checkout',
     selectSize: 'Select your size',
     shippingTo: 'Shipping to',
-    yourShoppingCart: 'Your cart contains',
+    yourShoppingCart: 'Your shopping cart contains',
     searchTitle: 'Find everything instantly',
     sortBy: 'Sort by',
     featured: 'Featured',
