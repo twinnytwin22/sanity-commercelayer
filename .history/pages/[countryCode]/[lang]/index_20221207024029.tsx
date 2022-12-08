@@ -73,7 +73,7 @@ const FilterPage: NextPage<Props> = ({
       <OrderStorage persistKey={`order-${code}`}>
         <OrderContainer attributes={{ language_code: languageCode }}>
           <Layout
-            title="The Crib | NFTs by Twinny"
+            title="Commerce Layer Starter"
             buildLanguages={buildLanguages}
             countries={countries}
             lang={lang}

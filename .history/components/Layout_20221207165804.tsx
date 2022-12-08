@@ -216,7 +216,7 @@ const Layout: React.FunctionComponent<Props> = ({
           handleAnimation={handleAnimation}
           lang={lang}
         />
-        <SubMenu />
+        <SubMenu/>
         <main>{children}</main>
         <footer className={`mt-12 border-t border-gray-200 py-8 ${opacity}`}>
           <p className="text-xs mx-5 sm:mx-0 sm:text-base text-gray-400 text-center">

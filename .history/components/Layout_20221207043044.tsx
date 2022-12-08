@@ -13,7 +13,6 @@ import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import locale from '@locale/index'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import SubMenu from './SubMenu'
 
 
 const getCmsHref = (cms: 'contentful' | 'dato' | string) => {
@@ -216,7 +215,6 @@ const Layout: React.FunctionComponent<Props> = ({
           handleAnimation={handleAnimation}
           lang={lang}
         />
-        <SubMenu />
         <main>{children}</main>
         <footer className={`mt-12 border-t border-gray-200 py-8 ${opacity}`}>
           <p className="text-xs mx-5 sm:mx-0 sm:text-base text-gray-400 text-center">
